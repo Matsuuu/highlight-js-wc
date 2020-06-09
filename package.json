@@ -1,0 +1,17 @@
+{
+    "name": "highlight-js-wc",
+    "version": "1.0.0",
+    "description": "A Web Component wrapper for the Highlight JS library",
+    "main": "highlight-js-wc.js",
+    "scripts": {
+        "start": "es-dev-server --app-index index.html --node-resolve --watch "
+    },
+    "files": [
+        "highlight-js-wc.js"
+    ],
+    "author": "Matsuuu",
+    "license": "ISC",
+    "devDependencies": {
+        "es-dev-server": "^1.54.1"
+    }
+}

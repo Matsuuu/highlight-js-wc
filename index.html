@@ -1,0 +1,53 @@
+<html>
+    <head> </head>
+
+    <body>
+        <highlight-js lang="javascript">
+addEventListener('load', () => {
+  const code = document.querySelector('#code');
+  const worker = new Worker('worker.js');
+  worker.onmessage = (event) => { code.innerHTML = event.data; }
+  worker.postMessage(code.textContent);
+});
+        </highlight-js>
+
+        <highlight-js lang="javascript" theme="gruvbox-dark">
+onmessage = (event) => {
+  importScripts('<path>/highlight.min.js');
+  const result = self.hljs.highlightAuto(event.data);
+  postMessage(result.value);
+}; 
+        </highlight-js>
+
+        <highlight-js lang="javascript">
+// require the highlight.js library, including all languages
+const hljs = require('./highlight.js');
+const highlightedCode = hljs.highlightAuto('<span>Hello World!</span>').
+        </highlight-js>
+
+        <highlight-js lang="javascript">
+const hljs = require("highlight.js/lib/core");  // require only the core library
+// separately require languages
+hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
+
+const highlightedCode = hljs.highlight('xml', '<span>Hello World!</span>').
+        </highlight-js>
+
+        <highlight-js lang="xml">
+&lt;!DOCTYPE html&gt;
+<title>Title</title>
+
+<style>body {width: 500px;}</style>
+
+<script type="application/javascript">
+  function $init() {return true;}
+</script>
+
+&lt;body&gt;
+  <p checked class="title" id='title'>Title</p>
+  <!-- here goes the rest of the page -->
+&lt;/body&gt;
+        </highlight-js>
+        <script type="module" src="highlight-js-wc.js"></script>
+    </body>
+</html>

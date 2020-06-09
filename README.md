@@ -1,5 +1,8 @@
 # Highlight JS Web Component
 
+[![](https://data.jsdelivr.com/v1/package/npm/highlight-js-wc/badge)](https://www.jsdelivr.com/package/npm/highlight-js-wc)
+[![npm version](https://badge.fury.io/js/highlight-js-wc.svg)](https://badge.fury.io/js/highlight-js-wc)
+
 Highlight JS Web Component was created to ease the use of the [Hightlight.js](https://github.com/highlightjs/highlight.js) library.
 
 Highlight-js-wc works by appending the needed style and theme during initialization, eliminating the need to

@@ -44,7 +44,11 @@ export default class HighlightJsWc extends HTMLElement {
     _parseCode() {
         // Replace all of these yucky characters to that the HTML doesn't go fucky wucky
         // There's still some problems with HTML parsing tho. Need to check that out some time
-        let codeString = this.innerHTML.replace(new RegExp(/</g), '&#60;').replace(new RegExp(/>/g), '&#62;');
+        let codeString = this.innerHTML
+            .replace(new RegExp(/</g), '&#60;')
+            .replace(new RegExp(/>/g), '&#62;')
+            .replace(new RegExp(/^\n|\n$/g), '')
+            .trimEnd();
         this.shadowRoot.querySelector('code').innerHTML = codeString;
         // After yanking the content, we can delete the original content from the dom to save space
         this.innerHTML = '';

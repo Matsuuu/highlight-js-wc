@@ -76,3 +76,4 @@ ignore command of the formatting library to ignore the node in the formatting pr
 
 -   Optimize importing process (less is more)
 -   Check for language support on all languages
+-   Set up / Fix update functionality

@@ -25,7 +25,7 @@ You can import the libary through a npm CDN, and use it straight away
 ```html
 <html>
     <head>
-        <script type="module" src="https://cdn.jsdelivr.net/npm/highlight-js-wc@1.0.0/highlight-js-wc.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/highlight-js-wc@1.1.3/highlight-js-wc.min.js"></script>
     </head>
 
     <body>
